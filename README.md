@@ -216,7 +216,7 @@ EdTech platform model selection
 
 Startup LLM budgeting
 
-🏢 Production Readiness
+## 🏢 Production Readiness
 
 The system is:
 
@@ -234,7 +234,7 @@ Dashboard-driven
 
 Resume-ready
 
-📌 Key Insights Demonstrated
+## 📌 Key Insights Demonstrated
 
 Larger models maximize accuracy but increase latency risk
 
@@ -246,7 +246,7 @@ Higher λ shifts selection toward cost-efficient models
 
 SLA constraints significantly alter optimal configuration
 
-🔬 Research-Ready Extensions
+## 🔬 Research-Ready Extensions
 
 Future enhancements:
 
@@ -262,7 +262,7 @@ Distributed deployment modeling
 
 GPU cost benchmarking
 
-📄 Executive Summary
+## 📄 Executive Summary
 
 This system provides a mathematically rigorous framework for LLM deployment optimization. It integrates multi-objective optimization, Pareto efficiency, SLA modeling, and cost forecasting into a unified production analytics platform.
 
