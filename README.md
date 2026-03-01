@@ -2,7 +2,7 @@
 
 A production-grade, multi-objective optimization system for evaluating Large Language Model (LLM) deployment strategies under cost and SLA constraints.
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-success?style=for-the-badge&logo=render)]([https://enterprise-ai-governance-risk.onrender.com](https://llm-cost-performance-optimization-platform.streamlit.app/)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-success?style=for-the-badge&logo=render)](https://llm-cost-performance-optimization-platform.streamlit.app/)
 
 This platform simulates LLM configurations and performs:
 
