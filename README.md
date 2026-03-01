@@ -10,6 +10,7 @@
 ![Pareto](https://img.shields.io/badge/Pareto-Frontier-green)
 ![SLA](https://img.shields.io/badge/SLA-Constrained-red)
 ![Deployment](https://img.shields.io/badge/Deployment-Cloud_Ready-success)
+
 A production-grade, multi-objective optimization system for evaluating Large Language Model (LLM) deployment strategies under cost and SLA constraints.
 
 [![Live Demo](https://img.shields.io/badge/Live-Demo-success?style=for-the-badge&logo=render)](https://llm-cost-performance-optimization-platform.streamlit.app/)
