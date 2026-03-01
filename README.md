@@ -1,5 +1,15 @@
-## 📌 LLM Cost–Performance Optimization Platform
+##  LLM Cost–Performance Optimization Platform
 
+![Python](https://img.shields.io/badge/Python-3.10-3776AB?logo=python&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-FF4B4B?logo=streamlit&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-Numerical_Computing-013243?logo=numpy&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-Data_Processing-150458?logo=pandas&logoColor=white)
+![Plotly](https://img.shields.io/badge/Plotly-Interactive_Charts-3F4F75?logo=plotly&logoColor=white)
+![Optimization](https://img.shields.io/badge/Multi--Objective-Optimization-purple)
+![MonteCarlo](https://img.shields.io/badge/Monte_Carlo-Simulation-orange)
+![Pareto](https://img.shields.io/badge/Pareto-Frontier-green)
+![SLA](https://img.shields.io/badge/SLA-Constrained-red)
+![Deployment](https://img.shields.io/badge/Deployment-Cloud_Ready-success)
 A production-grade, multi-objective optimization system for evaluating Large Language Model (LLM) deployment strategies under cost and SLA constraints.
 
 [![Live Demo](https://img.shields.io/badge/Live-Demo-success?style=for-the-badge&logo=render)](https://llm-cost-performance-optimization-platform.streamlit.app/)
