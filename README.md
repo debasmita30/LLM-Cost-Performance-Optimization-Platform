@@ -53,16 +53,23 @@ This system provides a structured optimization framework to make those decisions
 LLM-Cost-Performance-Optimization-Platform/
 
 ├── config.py
+
 ├── main.py
+
 ├── optimizer/
+
     ├── grid_search.py
+    
     ├── pareto.py
 
 ├── visualization/
+
     ├── plots.py
+    
     ├── dashboard.py
 
 ├── results/
+
     └── simulation_results.csv
 
 └── README.md
