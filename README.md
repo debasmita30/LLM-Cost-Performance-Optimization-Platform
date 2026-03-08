@@ -1,4 +1,4 @@
-# ⚡ LLM Cost–Performance Optimization Platform
+#  LLM Cost–Performance Optimization Platform
 
 <div align="center">
 
