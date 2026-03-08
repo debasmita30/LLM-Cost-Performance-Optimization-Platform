@@ -322,8 +322,7 @@ Open in browser: `http://localhost:8501`
 AI Engineer · LLM Systems · Prompt Optimization
 
 [![GitHub](https://img.shields.io/badge/GitHub-debasmita30-181717?style=flat-square&logo=github)](https://github.com/debasmita30)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/debasmita-chatterjee/)
-[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-00ffc8?style=flat-square)](https://leafy-cajeta-9270ea.netlify.app/)
+
 
 </div>
 
