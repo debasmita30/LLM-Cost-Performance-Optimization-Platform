@@ -134,7 +134,7 @@ c1.metric("Max Accuracy", f"{filtered_df['accuracy'].max():.3f}")
 c2.metric("Min Cost", f"{filtered_df['cost'].min():.4f}")
 c3.metric("Avg Latency", f"{filtered_df['latency'].mean():.3f}")
 c4.metric("Configs", len(filtered_df))
-c5.metric("Pareto Configs", "—")
+
 
 st.divider()
 
@@ -173,7 +173,6 @@ def compute_pareto_fast(df):
 
 pareto_df = compute_pareto_fast(filtered_df)
 
-# Update KPI
 c5.metric("Pareto Configs", len(pareto_df))
 
 st.subheader("📊 Pareto Frontier")
@@ -384,3 +383,4 @@ This platform integrates:
 
 Designed for real-world LLM production deployment decisions.
 """)
+
