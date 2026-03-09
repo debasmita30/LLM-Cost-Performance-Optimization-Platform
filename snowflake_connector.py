@@ -31,18 +31,15 @@ def get_connection():
 
 
 def initialize_schema():
-    """Create database, schema, and table if they don't exist."""
     if not SNOWFLAKE_AVAILABLE:
         return
     try:
         conn = get_connection()
         cursor = conn.cursor()
-
         cursor.execute(f"CREATE DATABASE IF NOT EXISTS {SNOWFLAKE_CONFIG['database']}")
         cursor.execute(f"USE DATABASE {SNOWFLAKE_CONFIG['database']}")
         cursor.execute(f"CREATE SCHEMA IF NOT EXISTS {SNOWFLAKE_CONFIG['schema']}")
         cursor.execute(f"USE SCHEMA {SNOWFLAKE_CONFIG['schema']}")
-
         cursor.execute("""
             CREATE TABLE IF NOT EXISTS simulation_results (
                 id                INTEGER AUTOINCREMENT PRIMARY KEY,
@@ -57,20 +54,18 @@ def initialize_schema():
                 run_timestamp     TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             )
         """)
-
         cursor.execute("""
             CREATE TABLE IF NOT EXISTS optimization_runs (
-                run_id            INTEGER AUTOINCREMENT PRIMARY KEY,
-                run_timestamp     TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-                total_configs     INTEGER,
-                pareto_configs    INTEGER,
-                best_accuracy     FLOAT,
-                min_cost          FLOAT,
+                run_id             INTEGER AUTOINCREMENT PRIMARY KEY,
+                run_timestamp      TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                total_configs      INTEGER,
+                pareto_configs     INTEGER,
+                best_accuracy      FLOAT,
+                min_cost           FLOAT,
                 sla_compliance_pct FLOAT,
-                notes             VARCHAR(500)
+                notes              VARCHAR(500)
             )
         """)
-
         conn.commit()
         cursor.close()
         conn.close()
@@ -80,17 +75,14 @@ def initialize_schema():
 
 
 def save_results_to_snowflake(df: pd.DataFrame, notes: str = "") -> bool:
-    """Save simulation results and log the optimization run."""
     if not SNOWFLAKE_AVAILABLE:
         print("Snowflake unavailable — saved to CSV only.")
         return False
     try:
         conn = get_connection()
         cursor = conn.cursor()
-
         cursor.execute(f"USE DATABASE {SNOWFLAKE_CONFIG['database']}")
         cursor.execute(f"USE SCHEMA {SNOWFLAKE_CONFIG['schema']}")
-
         for _, row in df.iterrows():
             cursor.execute("""
                 INSERT INTO simulation_results
@@ -107,7 +99,6 @@ def save_results_to_snowflake(df: pd.DataFrame, notes: str = "") -> bool:
                 float(row.get("objective_score", 0.0)),
                 bool(row.get("sla_compliant", False))
             ))
-
         sla_pct = df["sla_compliant"].mean() * 100 if "sla_compliant" in df.columns else 0
         cursor.execute("""
             INSERT INTO optimization_runs
@@ -121,20 +112,17 @@ def save_results_to_snowflake(df: pd.DataFrame, notes: str = "") -> bool:
             round(sla_pct, 2),
             notes or f"Auto-run at {datetime.now().strftime('%Y-%m-%d %H:%M')}"
         ))
-
         conn.commit()
         cursor.close()
         conn.close()
         print(f"Saved {len(df)} rows to Snowflake successfully.")
         return True
-
     except Exception as e:
         print(f"Snowflake save failed: {e} — falling back to CSV.")
         return False
 
 
 def load_results_from_snowflake(limit: int = 500) -> pd.DataFrame:
-    """Load most recent simulation results from Snowflake."""
     if not SNOWFLAKE_AVAILABLE:
         return pd.DataFrame()
     try:
@@ -156,7 +144,6 @@ def load_results_from_snowflake(limit: int = 500) -> pd.DataFrame:
 
 
 def get_run_history() -> pd.DataFrame:
-    """Load optimization run history for trend analysis."""
     if not SNOWFLAKE_AVAILABLE:
         return pd.DataFrame()
     try:
@@ -176,7 +163,6 @@ def get_run_history() -> pd.DataFrame:
 
 
 def get_best_historical_config() -> dict:
-    """Return the single best config across all historical runs."""
     if not SNOWFLAKE_AVAILABLE:
         return {}
     try:
@@ -195,3 +181,6 @@ def get_best_historical_config() -> dict:
     except Exception as e:
         print(f"Best config query failed: {e}")
         return {}
+
+
+initialize_schema()
