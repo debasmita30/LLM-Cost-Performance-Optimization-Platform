@@ -155,13 +155,13 @@ LLM-Cost-Performance-Optimization-Platform/
 ---
 
 ## Screenshots
-
-<img width="1918" height="847" alt="Image" src="https://github.com/user-attachments/assets/25671a7f-31fa-4c1b-8b9f-fc55430f07e6" />
-
-
+![Dashboard Overview](<img width="1918" height="847" alt="Image" src="https://github.com/user-attachments/assets/25671a7f-31fa-4c1b-8b9f-fc55430f07e6" />)
+> **Live dashboard connected to Snowflake.** Shows 108 total configurations tested across small, medium, and large models. The system instantly identifies the optimal config — large model at prompt_length=100 with 0.99 accuracy at just $0.00176 per request. All 3 services (Backend, Snowflake, Dashboard) are online and pulling real data.
 
 
 <img width="1918" height="872" alt="Image" src="https://github.com/user-attachments/assets/8b4ae47d-161d-4403-a410-31c8e47efbba" />
+
+## Red diamonds = the best possible configurations. Every other dot is "dominated" — meaning a red diamond exists that is both cheaper AND more accurate. Use this to instantly find which  model setup gives the most accuracy per dollar.
 
 
 <img width="1913" height="857" alt="Image" src="https://github.com/user-attachments/assets/78a69612-cfc9-4d6a-b306-1d1bd2314880" />
