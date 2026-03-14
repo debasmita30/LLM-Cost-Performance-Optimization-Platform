@@ -155,7 +155,7 @@ LLM-Cost-Performance-Optimization-Platform/
 ---
 
 ## Screenshots
-![Dashboard Overview](<img width="1918" height="847" alt="Image" src="https://github.com/user-attachments/assets/25671a7f-31fa-4c1b-8b9f-fc55430f07e6" />)
+(<img width="1918" height="847" alt="Image" src="https://github.com/user-attachments/assets/25671a7f-31fa-4c1b-8b9f-fc55430f07e6" />)
 > **Live dashboard connected to Snowflake.** Shows 108 total configurations tested across small, medium, and large models. The system instantly identifies the optimal config — large model at prompt_length=100 with 0.99 accuracy at just $0.00176 per request. All 3 services (Backend, Snowflake, Dashboard) are online and pulling real data.
 
 
