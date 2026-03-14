@@ -167,6 +167,9 @@ LLM-Cost-Performance-Optimization-Platform/
 <img width="1913" height="857" alt="Image" src="https://github.com/user-attachments/assets/78a69612-cfc9-4d6a-b306-1d1bd2314880" />
 
 
+<img width="1510" height="510" alt="Image" src="https://github.com/user-attachments/assets/bc24e56d-834f-4a77-a254-9cdae168fc2e" />
+
+
 
 
 
