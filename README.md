@@ -20,7 +20,7 @@
 
 ---
 
-[🏗️ Architecture](#️-system-architecture) &nbsp;|&nbsp; [📂 Project Structure](#-project-structure) &nbsp;|&nbsp; [🛠️ Tech Stack](#️-tech-stack) &nbsp;|&nbsp; [📡 API Reference](#-api-reference) &nbsp;|&nbsp; [📊 Screenshots](#-dashboard-screenshots)
+[🏗 Architecture](#️-system-architecture) &nbsp;|&nbsp; [📂 Project Structure](#-project-structure) &nbsp;|&nbsp; [🛠️ Tech Stack](#️-tech-stack) &nbsp;|&nbsp; [📡 API Reference](#-api-reference) &nbsp;|&nbsp; [Screenshots](#-dashboard-screenshots)
 
 </div>
 
