@@ -155,31 +155,54 @@ LLM-Cost-Performance-Optimization-Platform/
 ---
 
 ## Screenshots
-(<img width="1918" height="847" alt="Image" src="https://github.com/user-attachments/assets/25671a7f-31fa-4c1b-8b9f-fc55430f07e6" />)
-> **Live dashboard connected to Snowflake.** Shows 108 total configurations tested across small, medium, and large models. The system instantly identifies the optimal config — large model at prompt_length=100 with 0.99 accuracy at just $0.00176 per request. All 3 services (Backend, Snowflake, Dashboard) are online and pulling real data.
-
+<img width="1918" height="847" alt="Image" src="https://github.com/user-attachments/assets/25671a7f-31fa-4c1b-8b9f-fc55430f07e6" />
+Live dashboard connected to Snowflake.** Shows 108 total configurations tested across small, medium, and large models. The system instantly identifies the optimal config — large model at prompt_length=100 with 0.99 accuracy at just $0.00176 per request. All 3 services (Backend, Snowflake, Dashboard) are online and pulling real data.
+<br><br>
 
 <img width="1918" height="872" alt="Image" src="https://github.com/user-attachments/assets/8b4ae47d-161d-4403-a410-31c8e47efbba" />
 
-## Red diamonds = the best possible configurations. Every other dot is "dominated" — meaning a red diamond exists that is both cheaper AND more accurate. Use this to instantly find which  model setup gives the most accuracy per dollar.
-
+Red diamonds = the best possible configurations. Every other dot is "dominated" — meaning a red diamond exists that is both cheaper AND more accurate. Use this to instantly find which  model setup gives the most accuracy per dollar.
+<br><br>
 
 <img width="1913" height="857" alt="Image" src="https://github.com/user-attachments/assets/78a69612-cfc9-4d6a-b306-1d1bd2314880" />
 
+As lambda increases, the system penalizes cost more heavily and switches to 
+cheaper (slightly less accurate) models. The downward slope shows the real 
+accuracy-cost tradeoff — not a flat line, which means the optimization is working.
+<br><br>
 
 <img width="1510" height="510" alt="Image" src="https://github.com/user-attachments/assets/bc24e56d-834f-4a77-a254-9cdae168fc2e" />
+Compares small, medium, and large models across 3 dimensions at once. 
+Large model covers more area = better overall. Small/medium cluster together 
+showing similar cost-latency profiles.
+<br><br>
+
 
 <img width="1575" height="525" alt="Image" src="https://github.com/user-attachments/assets/53f735a9-5e2b-4526-b32c-21b9ff25a7d8" />
+Each cell = cost per correct answer for a given prompt length and few-shot count. 
+Shorter prompts with fewer examples are cheapest (top-left). 
+Use this to cut costs without hurting accuracy.
+<br><br>
 
 <img width="1532" height="540" alt="Image" src="https://github.com/user-attachments/assets/db1f79bc-6a44-4d46-a57e-ba5c477a8e27" />
+Only 16.7% of configurations exceed the latency limit at this SLA threshold — meaning 83.3% of setups are production-safe. Adjust the SLA slider to see how violation rate changes in real time.
+<br><br>
 
 <img width="1553" height="712" alt="Image" src="https://github.com/user-attachments/assets/2d826a53-fba9-4156-bc80-3e9af33c9b13" />
+Projected monthly cost: $528 for 10,000 daily queries using the large model. Monte Carlo stability test confirms large model is most reliable (lowest std=0.022). Dual-objective optimization balances both cost and latency penalties simultaneously to find the best production config.
+<br><br>
+
 
 <img width="1547" height="652" alt="Image" src="https://github.com/user-attachments/assets/57c2c3c6-e3e1-44ff-9b85-2230fcc206b8" />
 
+Best SLA-compliant config: large model, 99% accuracy at $0.00176/request.** The 3D scatter lets you rotate and explore all 108 configurations across cost, latency, and accuracy simultaneously
+<br><br>
+
+
 <img width="1533" height="662" alt="Image" src="https://github.com/user-attachments/assets/cf39e1e2-f734-43b8-8c80-0a0ac2a65309" />
 
-
+Executive Summary auto-generates the final recommendation — optimal model, efficiency score, and monthly cost projection, all pulled live from Snowflake. Risk category dropped to **Low Risk** (16.67% violation rate).
+<br><br>
 
 
 
