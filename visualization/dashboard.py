@@ -191,14 +191,21 @@ st.plotly_chart(fig, use_container_width=True)
 # ── Lambda Tradeoff ────────────────────────────────────────────
 lambda_space = np.linspace(0, 5, 30)
 lambda_results = []
+acc_min, acc_max = filtered_df["accuracy"].min(), filtered_df["accuracy"].max()
+cost_min, cost_max = filtered_df["cost"].min(), filtered_df["cost"].max()
+
+norm = filtered_df.copy()
+norm["acc_norm"] = (norm["accuracy"] - acc_min) / (acc_max - acc_min + 1e-9)
+norm["cost_norm"] = (norm["cost"] - cost_min) / (cost_max - cost_min + 1e-9)
+
 for lam in lambda_space:
-    temp_df = filtered_df.copy()
-    temp_df.loc[:, "objective"] = temp_df["accuracy"] - lam * temp_df["cost"]
+    temp_df = norm.copy()
+    temp_df["objective"] = temp_df["acc_norm"] - lam * temp_df["cost_norm"]
     best = temp_df.loc[temp_df["objective"].idxmax()]
     lambda_results.append({
         "lambda": lam,
-        "accuracy": best["accuracy"],
-        "cost": best["cost"]
+        "accuracy": best["acc_norm"],
+        "cost": best["cost_norm"]
     })
 lambda_df = pd.DataFrame(lambda_results)
 
