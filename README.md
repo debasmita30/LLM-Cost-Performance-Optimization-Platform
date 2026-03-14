@@ -14,9 +14,13 @@
 
 **A production-grade, multi-objective optimization system for evaluating LLM deployment strategies under cost and SLA constraints**
 
-🌐 **[Live Demo](https://go-job-queue.vercel.app/)** &nbsp;|&nbsp; ⚙️ **[API Health](https://go-job-queue.onrender.com/health)** &nbsp;|&nbsp; 📊 **[Live Stats](https://go-job-queue.onrender.com/api/v1/stats)** &nbsp;|&nbsp; 💻 **[Source Code](https://github.com/debasmita30/go-job-queue)**
+🌐 **[Live Dashboard](https://llm-cost-performance-optimization.onrender.com)** &nbsp;|&nbsp; ⚙️ **[API Health](https://llm-cost-performance-optimization.onrender.com/health)** &nbsp;|&nbsp; 📊 **[Live Stats](https://llm-cost-performance-optimization.onrender.com/results)** &nbsp;|&nbsp; 💻 **[Source Code](https://github.com/debasmita30/LLM-Cost-Performance-Optimization-Platform)**
 
-> **Note:** Hosted on Render free tier — if the demo shows "Server Offline", open the [API Health](https://go-job-queue.onrender.com/health) link first and wait 30–60 seconds for it to wake up, then refresh the demo.
+> **Note:** Hosted on Render free tier — if the dashboard shows "Backend Offline", open the [API Health](https://llm-cost-performance-optimization.onrender.com/health) link first and wait 30–60 seconds for it to wake up, then refresh the dashboard.
+
+---
+
+[🏗️ Architecture](#️-system-architecture) &nbsp;|&nbsp; [📂 Project Structure](#-project-structure) &nbsp;|&nbsp; [🛠️ Tech Stack](#️-tech-stack) &nbsp;|&nbsp; [📡 API Reference](#-api-reference) &nbsp;|&nbsp; [📊 Screenshots](#-dashboard-screenshots)
 
 </div>
 
