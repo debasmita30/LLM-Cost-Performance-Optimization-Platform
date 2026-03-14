@@ -156,7 +156,7 @@ LLM-Cost-Performance-Optimization-Platform/
 
 ## Screenshots
 <img width="1918" height="847" alt="Image" src="https://github.com/user-attachments/assets/25671a7f-31fa-4c1b-8b9f-fc55430f07e6" />
-Live dashboard connected to Snowflake.** Shows 108 total configurations tested across small, medium, and large models. The system instantly identifies the optimal config — large model at prompt_length=100 with 0.99 accuracy at just $0.00176 per request. All 3 services (Backend, Snowflake, Dashboard) are online and pulling real data.
+Live dashboard connected to Snowflake.Shows 108 total configurations tested across small, medium, and large models. The system instantly identifies the optimal config — large model at prompt_length=100 with 0.99 accuracy at just $0.00176 per request. All 3 services (Backend, Snowflake, Dashboard) are online and pulling real data.
 <br><br>
 
 <img width="1918" height="872" alt="Image" src="https://github.com/user-attachments/assets/8b4ae47d-161d-4403-a410-31c8e47efbba" />
@@ -195,7 +195,7 @@ Projected monthly cost: $528 for 10,000 daily queries using the large model. Mon
 
 <img width="1547" height="652" alt="Image" src="https://github.com/user-attachments/assets/57c2c3c6-e3e1-44ff-9b85-2230fcc206b8" />
 
-Best SLA-compliant config: large model, 99% accuracy at $0.00176/request.** The 3D scatter lets you rotate and explore all 108 configurations across cost, latency, and accuracy simultaneously
+Best SLA-compliant config: large model, 99% accuracy at $0.00176/request.The 3D scatter lets you rotate and explore all 108 configurations across cost, latency, and accuracy simultaneously
 <br><br>
 
 
