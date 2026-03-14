@@ -220,14 +220,22 @@ st.subheader("🕸 Model Radar Comparison")
 radar_df = filtered_df.groupby("model").agg({
     "accuracy": "mean", "cost": "mean", "latency": "mean"
 }).reset_index()
+
+for col in ["accuracy", "cost", "latency"]:
+    mn, mx = radar_df[col].min(), radar_df[col].max()
+    radar_df[f"{col}_norm"] = (radar_df[col] - mn) / (mx - mn + 1e-9)
+
 fig_radar = go.Figure()
 for _, row in radar_df.iterrows():
     fig_radar.add_trace(go.Scatterpolar(
-        r=[row["accuracy"], row["cost"], row["latency"]],
+        r=[row["accuracy_norm"], row["cost_norm"], row["latency_norm"]],
         theta=["Accuracy", "Cost", "Latency"],
         fill='toself', name=row["model"]
     ))
-fig_radar.update_layout(polar=dict(radialaxis=dict(visible=True)))
+fig_radar.update_layout(
+    polar=dict(radialaxis=dict(visible=True, range=[0, 1])),
+    showlegend=True
+)
 st.plotly_chart(fig_radar, use_container_width=True)
 
 # ── Heatmap ────────────────────────────────────────────────────
